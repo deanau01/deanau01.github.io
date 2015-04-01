@@ -2,8 +2,21 @@
 
 <body>
 <caption>BMI Calculator</caption>
-<label for="HF">Height</label>
+<label for="HF">Height in Feet</label>
 <input type="text" min="0" max="500" id="HF" >
+<label for="weight">Weight</label>
+<input type="text" min="0" max="500" id="HI" >
+<button onclick="convert">Calculate BMI</button>
+
+<h1 id="answer"></h1>
+
+<script>
+  convert = function() {
+    height = document.querySelector('#HF').value;
+    weight = document.querySelector('#weight').value;
+    
+  }
+</script>
 
 </body>
 
