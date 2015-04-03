@@ -21,12 +21,34 @@
   
   </head>
   <body>
-  <label for="fn"> Tasks</label>
+
+  <label for="fn">Tasks</label>
   <input type="text" id="task">
   
   <button onclick="addtask();">Add Task</button>
+  <button onclick="clear();">Clear Task</button>
   
   <table id="list">
    <tr>
     <th>Tasks<th>
     </tr>
+    
+    <script>
+     addentry=function() {
+                item=document.querySelector("#task").value;
+                
+                newrow=document.createElement("tr");
+                td1=document.createElement("td");
+                td1.innerHTML=item;
+                td1.onclick=edititem;
+                newrow.appendChild(td1);
+                table=document.querySelector("#list");
+                table.appendChild(newrow);
+                
+                document.querySelector("#item").value="";
+                }
+                
+                edititem=function(){
+                item=document.querySelector("#item").value;
+                this.innerHTML=item;
+                }
