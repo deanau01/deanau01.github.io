@@ -25,7 +25,7 @@
   <label for="fn">Tasks</label>
   <input type="text" id="task">
   
-  <button onclick="addtask();">Add Task</button>
+  <button onclick="addentry();">Add Task</button>
   <button onclick="clear();">Clear Task</button>
   
   <table id="list">
@@ -34,7 +34,7 @@
     </tr>
     
     <script>
-     addtask=function() {
+     addentry=function() {
                 item=document.querySelector("#task").value;
                 
                 newrow=document.createElement("tr");
