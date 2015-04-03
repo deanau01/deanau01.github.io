@@ -1,48 +1,26 @@
-<html>
-<head>
-  <style>
-  .checkedoff {
-  text-decoration: line-through;
-  }
-  
-  .red{
-  color:red
-  }
-  
-  .yellow{
-  color:yellow
-  }
-  
-  .blue{
-  color:blue
-  }
-  
-  </style>
-  
-  </head>
-  <body>
 
-  <label for="fn">Tasks</label>
-  <input type="text" id="task">
-  
-  <button onclick="addentry();">Add Task</button>
-  <button onclick="clear();">Clear Task</button>
-  
-  <table id="list">
-   <tr>
-    <th>Tasks<th>
-    </tr>
-    
-    <script>
-     addentry=function() {
-                item=document.querySelector("#task").value;
+    <html>
+    <body>
+        <input type="text" id="item">
+        
+        <button onclick="addentry();">Add Item</button>
+        
+        <table id="todo">
+            <tr>
+                <th>To Do</th>
+            </tr>
+        </table>
+        
+            <script>
+                addentry=function() {
+                item=document.querySelector("#item").value;
                 
                 newrow=document.createElement("tr");
                 td1=document.createElement("td");
                 td1.innerHTML=item;
                 td1.onclick=edititem;
                 newrow.appendChild(td1);
-                table=document.querySelector("#list");
+                table=document.querySelector("#todo");
                 table.appendChild(newrow);
                 
                 document.querySelector("#item").value="";
@@ -50,5 +28,8 @@
                 
                 edititem=function(){
                 item=document.querySelector("#item").value;
-                this.innerHTML=item;
+                this.inerHTML=item;
                 }
+            </script>
+    </body>
+</html>
